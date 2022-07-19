@@ -1,0 +1,5 @@
+spring:
+  security:
+    user:
+      name: nott # 自定义用户名
+      password: nott123 # 自定义密码
