@@ -34,6 +34,24 @@ public class UserService implements UserDetailsService {
     @Qualifier("myPasswordEncoder")
     private PasswordEncoder passwordEncoder;
 
+
+    /**
+     * 1.UserDetails接口：
+     * Collection<? extends GrantedAuthority> getAuthorities(); //权限集合
+     * String getPassword();
+     * String getUsername();
+     * boolean isAccountNonExpired(); //账号是否过期
+     * boolean isAccountNonLocked(); //账号是否锁定
+     * boolean isCredentialsNonExpired(); //凭证是否过期
+     * boolean isEnabled();  // 是否可用
+     * User实现类(org.springframework.security.core.userdetails)：
+     * public User(String username, String password, boolean enabled, boolean accountNonExpired, boolean credentialsNonExpired, boolean accountNonLocked, Collection<? extends GrantedAuthority> authorities)
+     * 2.UserDetailsService接口
+     * 主要作用：获取用户信息，得到是UserDetails对象。一般需要自定义实现这个接口，重写loadUserByUsername()方法
+     * 实现类：
+     * InMemoryUserDetailsManager：在内存中维护
+     * JdbcUserDetailsManager：使用数据库维护，底层使用jdbcTemplate方法
+     */
     @Override
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
         LambdaQueryWrapper<User> wrapper = new LambdaQueryWrapper<>();
