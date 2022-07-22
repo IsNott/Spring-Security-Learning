@@ -1,4 +1,4 @@
-package com.nott.ch05;
+package com.nott.ch06;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

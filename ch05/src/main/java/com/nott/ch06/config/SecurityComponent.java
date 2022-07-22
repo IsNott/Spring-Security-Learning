@@ -1,6 +1,5 @@
-package com.nott.ch05.config;
+package com.nott.ch06.config;
 
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.core.userdetails.User;
