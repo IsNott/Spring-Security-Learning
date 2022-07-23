@@ -1,11 +1,14 @@
-package com.nott.ch06.service;
+package com.nott.ch07.service;
 
-import com.nott.ch06.entity.SysRole;
-import com.nott.ch06.entity.SysUser;
-import com.nott.ch06.mapper.SysRoleMapper;
-import com.nott.ch06.mapper.SysUserMapper;
+
+import com.nott.ch07.entity.SysRole;
+import com.nott.ch07.entity.SysUser;
+import com.nott.ch07.mapper.SysRoleMapper;
+import com.nott.ch07.mapper.SysUserMapper;
+
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -28,8 +31,10 @@ import java.util.List;
 public class UserService implements UserDetailsService {
 
     @Autowired
+//    @Qualifier("sysUserMapper")
     private SysUserMapper sysUserMapper;
     @Autowired
+//    @Qualifier("sysRoleMapper")
     private SysRoleMapper sysRoleMapper;
 
     @Override
