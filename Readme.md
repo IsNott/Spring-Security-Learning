@@ -13,7 +13,8 @@ SpringSecurity 学习记录
 ##### ch04 数据库中查询用户信息进行认证
 ##### ch05 基于InMemoryUserDetailsManager的账号认证
 ##### ch06 基于RABC的角色认证及自定义登录
-##### ch06 基于RABC的角色认证及使用ajax登录
+##### ch07 基于RABC的角色认证及使用ajax登录
+##### ch08 基于RABC的角色认证及使用JWT实现无状态登录
 ### 后续
-待整合JWT+Oauth2.0
+待整合Oauth2.0
 
